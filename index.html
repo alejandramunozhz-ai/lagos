@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)file:///Volumes/ale/lagos/lagos_v2.html# -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LAGOS — Ropa y Accesorios</title>
+<link href="./LAGOS — Ropa y Accesorios_files/css2" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --black: #0d0d0d;
+  --white: #ffffff;
+  --off: #f5f4f0;
+  --grey: #e8e6e1;
+  --mid: #999;
+  --dark: #333;
+  --accent: #1a1a1a;
+  --star: #f0a500;
+  --tag-bg: #0d0d0d;
+  --tag-text: #fff;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  background: var(--white);
+  color: var(--black);
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+/* ── NAV ── */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--white);
+  border-bottom: 1px solid var(--grey);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+  height: 64px;
+}
+
+.nav-logo img {
+  height: 32px;
+  width: auto;
+  display: block;
+}
+
+.nav-center {
+  display: flex;
+  gap: 36px;
+}
+.nav-center a {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: var(--dark);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.nav-center a:hover { color: var(--black); }
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--off);
+  border-radius: 100px;
+  padding: 8px 16px;
+  font-size: 13px;
+  color: var(--mid);
+  cursor: pointer;
+  border: none;
+}
+
+.nav-icon {
+  width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  border: 1.5px solid var(--grey);
+  cursor: pointer;
+  color: var(--black);
+  font-size: 16px;
+  transition: background 0.2s;
+}
+.nav-icon:hover { background: var(--off); }
+
+/* ── HERO ── */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: calc(100vh - 64px);
+  overflow: hidden;
+}
+
+.hero-left {
+  background: var(--off);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 64px 56px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-title-giant {
+  position: absolute;
+  top: -20px;
+  left: -8px;
+  font-family: 'Unbounded', sans-serif;
+  font-size: clamp(90px, 12vw, 160px);
+  font-weight: 900;
+  line-height: 0.85;
+  color: rgba(0,0,0,0.06);
+  pointer-events: none;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--black);
+  color: var(--white);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 100px;
+  margin-bottom: 28px;
+  width: fit-content;
+}
+.hero-eyebrow::before {
+  content: '';
+  width: 6px; height: 6px;
+  background: #4ade80;
+  border-radius: 50%;
+}
+
+.hero-headline {
+  font-family: 'Unbounded', sans-serif;
+  font-size: clamp(36px, 4.5vw, 64px);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -1px;
+  color: var(--black);
+  margin-bottom: 24px;
+}
+
+.hero-sub {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: #666;
+  max-width: 320px;
+  margin-bottom: 40px;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.btn-black {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--black);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 14px 28px;
+  border-radius: 100px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+}
+.btn-black:hover { background: #333; transform: translateY(-1px); }
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--black);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 14px 24px;
+  border-radius: 100px;
+  border: 1.5px solid var(--grey);
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+.btn-ghost:hover { border-color: var(--black); background: var(--off); }
+
+.hero-stats {
+  display: flex;
+  gap: 32px;
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid var(--grey);
+}
+.hero-stat-num {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+}
+.hero-stat-label {
+  font-size: 11px;
+  color: var(--mid);
+  margin-top: 2px;
+  letter-spacing: 0.5px;
+}
+
+.hero-right {
+  position: relative;
+  overflow: hidden;
+  background: #1c1c1c;
+}
+
+.hero-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.hero-badge {
+  position: absolute;
+  background: var(--white);
+  border-radius: 16px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+}
+
+.hero-badge-img {
+  width: 52px; height: 52px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.hero-badge-text { font-size: 11px; font-weight: 500; color: var(--black); }
+.hero-badge-sub { font-size: 10px; color: var(--mid); margin-top: 2px; }
+
+.badge-1 { top: 28%; left: -20px; animation: float1 4s ease-in-out infinite; }
+.badge-2 { bottom: 24%; right: -20px; animation: float2 5s ease-in-out infinite; }
+
+@keyframes float1 {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes float2 {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(8px); }
+}
+
+/* ── TICKER ── */
+.ticker {
+  background: var(--black);
+  padding: 14px 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.ticker-inner {
+  display: inline-flex;
+  animation: tickerMove 22s linear infinite;
+}
+.ticker-item {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--white);
+  padding: 0 32px;
+}
+.ticker-dot {
+  color: var(--star);
+  font-size: 18px;
+  vertical-align: middle;
+}
+@keyframes tickerMove {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ── SECTION HEADER ── */
+.section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+.section-title {
+  font-family: 'Unbounded', sans-serif;
+  font-size: clamp(22px, 3vw, 36px);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+.see-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--white);
+  background: var(--black);
+  padding: 10px 20px;
+  border-radius: 100px;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: background 0.2s;
+  cursor: pointer;
+  border: none;
+}
+.see-all:hover { background: #333; }
+
+/* ── PRODUCTS ── */
+.section-pad { padding: 72px 48px; }
+.section-pad-grey { padding: 72px 48px; background: var(--off); }
+
+/* New Arrivals — horizontal list */
+.arrivals-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.arrival-card {
+  background: var(--white);
+  border: 1px solid var(--grey);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  cursor: pointer;
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+.arrival-card:hover {
+  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
+.arrival-card-img {
+  width: 110px;
+  min-height: 120px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.arrival-card-info {
+  padding: 16px;
+  flex: 1;
+}
+.arrival-card-name {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 6px;
+}
+.stars {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 4px;
+}
+.star { color: var(--star); font-size: 12px; }
+.star-empty { color: var(--grey); font-size: 12px; }
+.reviews { font-size: 10px; color: var(--mid); }
+.price {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 8px;
+  color: var(--black);
+}
+
+/* Bestsellers — card grid */
+.best-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.best-card {
+  border-radius: 24px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  background: var(--grey);
+  transition: transform 0.3s;
+}
+.best-card:hover { transform: translateY(-4px); }
+
+.best-card-img-wrap {
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  position: relative;
+}
+.best-card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.5s;
+}
+.best-card:hover .best-card-img-wrap img { transform: scale(1.06); }
+
+.best-card-badge {
+  position: absolute;
+  top: 14px; left: 14px;
+  background: var(--white);
+  color: var(--black);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 100px;
+}
+
+.best-card-info {
+  padding: 16px;
+  background: var(--white);
+}
+.best-card-name {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 6px;
+}
+.best-card-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.add-btn {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  background: var(--black);
+  color: var(--white);
+  border: none;
+  font-size: 18px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  line-height: 1;
+  transition: background 0.2s;
+}
+.add-btn:hover { background: #444; }
+
+/* ── FULL BANNER ── */
+.full-banner {
+  position: relative;
+  height: 56vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background: #0d0d0d;
+}
+.full-banner img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  opacity: 0.45;
+}
+.full-banner-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 80px;
+}
+.full-banner-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+  color: var(--white);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 100px;
+  margin-bottom: 24px;
+  border: 1px solid rgba(255,255,255,0.2);
+  width: fit-content;
+}
+.full-banner-title {
+  font-family: 'Unbounded', sans-serif;
+  font-size: clamp(48px, 7vw, 100px);
+  font-weight: 900;
+  line-height: 0.95;
+  color: var(--white);
+  margin-bottom: 32px;
+  letter-spacing: -2px;
+}
+.full-banner-title span {
+  -webkit-text-stroke: 1px rgba(255,255,255,0.5);
+  color: transparent;
+}
+
+/* ── CATEGORIES ── */
+.cats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.cat-card {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  cursor: pointer;
+  background: var(--grey);
+}
+.cat-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+.cat-card:hover img { transform: scale(1.06); }
+.cat-card-label {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.7));
+  padding: 40px 24px 20px;
+}
+.cat-card-name {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--white);
+}
+.cat-card-count {
+  font-size: 11px;
+  color: rgba(255,255,255,0.6);
+  margin-top: 4px;
+}
+
+/* ── BIG TEXT SECTION ── */
+.big-text-section {
+  padding: 80px 48px;
+  background: var(--black);
+  text-align: center;
+  overflow: hidden;
+}
+.big-text-section p {
+  font-family: 'Unbounded', sans-serif;
+  font-size: clamp(32px, 5vw, 72px);
+  font-weight: 900;
+  line-height: 1.1;
+  color: var(--white);
+  letter-spacing: -1px;
+}
+.big-text-section p span {
+  -webkit-text-stroke: 1.5px rgba(255,255,255,0.25);
+  color: transparent;
+}
+
+/* ── FOOTER ── */
+footer {
+  background: var(--off);
+  border-top: 1px solid var(--grey);
+  padding: 64px 48px 32px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+.footer-logo img { height: 44px; width: auto; margin-bottom: 16px; display: block; }
+.footer-desc { font-size: 13px; font-weight: 300; line-height: 1.7; color: #666; max-width: 260px; }
+.footer-col-title {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: 10px; }
+.footer-links a { font-size: 13px; font-weight: 300; color: #666; text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: var(--black); }
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 24px;
+  border-top: 1px solid var(--grey);
+}
+.footer-copy { font-size: 12px; color: var(--mid); }
+.footer-socials { display: flex; gap: 20px; }
+.footer-socials a { font-size: 12px; color: var(--mid); text-decoration: none; transition: color 0.2s; font-weight: 500; }
+.footer-socials a:hover { color: var(--black); }
+
+/* ── WA BUTTON ── */
+.wa-btn {
+  position: fixed;
+  bottom: 28px; right: 28px;
+  z-index: 200;
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: #25d366;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.wa-btn:hover { transform: scale(1.1); box-shadow: 0 8px 28px rgba(37,211,102,0.5); }
+.wa-btn svg { width: 28px; height: 28px; fill: white; }
+
+/* ── SCROLL REVEAL ── */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ── MOBILE ── */
+@media (max-width: 900px) {
+  nav { padding: 0 20px; }
+  .nav-center { display: none; }
+  .hero { grid-template-columns: 1fr; min-height: auto; }
+  .hero-right { height: 55vw; }
+  .hero-left { padding: 40px 24px; }
+  .arrivals-grid { grid-template-columns: 1fr 1fr; }
+  .best-grid { grid-template-columns: 1fr 1fr; }
+  .cats-grid { grid-template-columns: 1fr; }
+  .section-pad, .section-pad-grey { padding: 48px 20px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+  .full-banner-content { padding: 0 24px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="file:///Volumes/ale/lagos/lagos_v2.html#" class="nav-logo"><img src="./LAGOS — Ropa y Accesorios_files/lagos_logo2.png" alt="Lagos Clothes"></a>
+  <div class="nav-center">
+    <a href="file:///Volumes/ale/lagos/lagos_v2.html#arrivals">Novedades</a>
+    <a href="file:///Volumes/ale/lagos/lagos_v2.html#best">Bestsellers</a>
+    <a href="file:///Volumes/ale/lagos/lagos_v2.html#cats">Categorías</a>
+    <a href="file:///Volumes/ale/lagos/lagos_v2.html#nosotros">Nosotros</a>
+  </div>
+  <div class="nav-right">
+    <button class="nav-search">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
+      Buscar
+    </button>
+    <div class="nav-icon">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+    </div>
+    <div class="nav-icon">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-title-giant">LAGOS</div>
+    <div class="hero-eyebrow">Nueva Temporada 2025</div>
+    <h1 class="hero-headline">VISTE<br>LA CALLE.<br>SÉ CHILE.</h1>
+    <p class="hero-sub">Ropa urbana hecha con identidad. Desde Santiago para todo el país — cargos, tricotas, accesorios y más.</p>
+    <div class="hero-actions">
+      <a href="file:///Volumes/ale/lagos/lagos_v2.html#arrivals" class="btn-black">
+        Explorar Catálogo
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+      </a>
+      <a href="file:///Volumes/ale/lagos/lagos_v2.html#nosotros" class="btn-ghost">La Marca</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-num">313+</div>
+        <div class="hero-stat-label">Publicaciones</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">5.5K</div>
+        <div class="hero-stat-label">Seguidores</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">100%</div>
+        <div class="hero-stat-label">Nacional 🇨🇱</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="./LAGOS — Ropa y Accesorios_files/657053476_18169711624404626_6147191533445026786_n.jpg" alt="Lagos Hero">
+    <!-- Badge 1 -->
+    <div class="hero-badge badge-1">
+      <img class="hero-badge-img" src="file:///Volumes/ale/lagos/626461081_18093678245512879_5863734734310083634_n.jpg" alt="">
+      <div>
+        <div class="hero-badge-text">Caps Lagos</div>
+        <div class="hero-badge-sub">✦ Nueva llegada</div>
+      </div>
+    </div>
+    <!-- Badge 2 -->
+    <div class="hero-badge badge-2">
+      <img class="hero-badge-img" src="./LAGOS — Ropa y Accesorios_files/463879176_18352200226139217_8585962743966410837_n.jpg" alt="">
+      <div>
+        <div class="hero-badge-text">Short Cargo Camo</div>
+        <div class="hero-badge-sub">✦ Bestseller</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-inner">
+    <span class="ticker-item">Ropa Urbana</span>
+    <span class="ticker-item ticker-dot">✦</span>
+    <span class="ticker-item">Hecho en Chile</span>
+    <span class="ticker-item ticker-dot">✦</span>
+    <span class="ticker-item">Pantalones Cargo</span>
+    <span class="ticker-item ticker-dot">✦</span>
+    <span class="ticker-item">Tricotas Lagos</span>
+    <span class="ticker-item ticker-dot">✦</span>
+    <span class="ticker-item">Caps &amp; Dokeros</span>
+    <span class="ticker-item ticker-dot">✦</span>
+    <span class="ticker-item">Deporte &amp; Street</span>
+    <span class="ticker-item ticker-dot">✦</span>
+    <span class="ticker-item">Ropa Urbana</span>
+    <span class="ticker-item ticker-dot">✦</span>
+    <span class="ticker-item">Hecho en Chile</span>
+    <span class="ticker-item ticker-dot">✦</span>
+    <span class="ticker-item">Pantalones Cargo</span>
+    <span class="ticker-item ticker-dot">✦</span>
+    <span class="ticker-item">Tricotas Lagos</span>
+    <span class="ticker-item ticker-dot">✦</span>
+    <span class="ticker-item">Caps &amp; Dokeros</span>
+    <span class="ticker-item ticker-dot">✦</span>
+    <span class="ticker-item">Deporte &amp; Street</span>
+    <span class="ticker-item ticker-dot">✦</span>
+  </div>
+</div>
+
+<!-- NEW ARRIVALS -->
+<section id="arrivals" class="section-pad">
+  <div class="section-header reveal visible">
+    <h2 class="section-title">Novedades</h2>
+    <button class="see-all">Ver Todo →</button>
+  </div>
+  <div class="arrivals-grid reveal visible">
+    <div class="arrival-card">
+      <img class="arrival-card-img" src="./LAGOS — Ropa y Accesorios_files/622048723_17935413984141330_1787146025882116850_n.jpg" alt="Pantalón Corderoy">
+      <div class="arrival-card-info">
+        <div class="arrival-card-name">Pantalón<br>Corderoy</div>
+        <div class="stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <div class="reviews">(48 Reseñas)</div>
+        <div class="price">$34.990</div>
+      </div>
+    </div>
+    <div class="arrival-card">
+      <img class="arrival-card-img" src="./LAGOS — Ropa y Accesorios_files/467469749_18356806669139217_7161035627043425440_n.jpg" alt="Camiseta Camo">
+      <div class="arrival-card-info">
+        <div class="arrival-card-name">Camiseta<br>Camo Lagos</div>
+        <div class="stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star-empty">★</span>
+        </div>
+        <div class="reviews">(31 Reseñas)</div>
+        <div class="price">$19.990</div>
+      </div>
+    </div>
+    <div class="arrival-card">
+      <img class="arrival-card-img" src="./LAGOS — Ropa y Accesorios_files/624629952_18310787848253867_2166174676682003565_n.jpg" alt="Dokeros Lagos">
+      <div class="arrival-card-info">
+        <div class="arrival-card-name">Dokero<br>Fish Patch</div>
+        <div class="stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <div class="reviews">(64 Reseñas)</div>
+        <div class="price">$12.990</div>
+      </div>
+    </div>
+    <div class="arrival-card">
+      <img class="arrival-card-img" src="file:///Volumes/ale/lagos/626461081_18093678245512879_5863734734310083634_n.jpg" alt="Cap Lagos">
+      <div class="arrival-card-info">
+        <div class="arrival-card-name">Cap 5 Panel<br>Lagos</div>
+        <div class="stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <div class="reviews">(87 Reseñas)</div>
+        <div class="price">$14.990</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BESTSELLERS -->
+<section id="best" class="section-pad-grey">
+  <div class="section-header reveal visible">
+    <h2 class="section-title">Bestsellers</h2>
+    <button class="see-all">Ver Todo →</button>
+  </div>
+  <div class="best-grid reveal visible">
+    <div class="best-card">
+      <div class="best-card-img-wrap">
+        <img src="./LAGOS — Ropa y Accesorios_files/467693476_18356806561139217_8977673325239828317_n.jpg" alt="Pantalón Camo">
+        <div class="best-card-badge">🔥 #1 Vendido</div>
+      </div>
+      <div class="best-card-info">
+        <div class="best-card-name">Pantalón Cargo Camo</div>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <div class="best-card-row">
+          <div class="price">$34.990</div>
+          <button class="add-btn">+</button>
+        </div>
+      </div>
+    </div>
+    <div class="best-card">
+      <div class="best-card-img-wrap">
+        <img src="./LAGOS — Ropa y Accesorios_files/505796844_1745964850134673_4193326082153949198_n.jpg" alt="Cargo Denim">
+        <div class="best-card-badge">Nuevo</div>
+      </div>
+      <div class="best-card-info">
+        <div class="best-card-name">Cargo Denim Negro</div>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star-empty">★</span></div>
+        <div class="best-card-row">
+          <div class="price">$38.990</div>
+          <button class="add-btn">+</button>
+        </div>
+      </div>
+    </div>
+    <div class="best-card">
+      <div class="best-card-img-wrap">
+        <img src="./LAGOS — Ropa y Accesorios_files/498334169_2764019393794748_8344282727909537190_n.jpg" alt="Jersey Leopard">
+        <div class="best-card-badge">Sport</div>
+      </div>
+      <div class="best-card-info">
+        <div class="best-card-name">Jersey Leopard</div>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <div class="best-card-row">
+          <div class="price">$29.990</div>
+          <button class="add-btn">+</button>
+        </div>
+      </div>
+    </div>
+    <div class="best-card">
+      <div class="best-card-img-wrap">
+        <img src="./LAGOS — Ropa y Accesorios_files/657053476_18169711624404626_6147191533445026786_n.jpg" alt="Set Hoodie">
+        <div class="best-card-badge">Pack</div>
+      </div>
+      <div class="best-card-info">
+        <div class="best-card-name">Set Hoodie + Jogger</div>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <div class="best-card-row">
+          <div class="price">$59.990</div>
+          <button class="add-btn">+</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FULL BANNER -->
+<section class="full-banner">
+  <img src="./LAGOS — Ropa y Accesorios_files/467712918_18356806339139217_347589812060889473_n.jpg" alt="Banner Lagos">
+  <div class="full-banner-content">
+    <div class="full-banner-tag">Temporada 2025</div>
+    <h2 class="full-banner-title">NUEVA<br><span>COLECCIÓN</span></h2>
+    <a href="file:///Volumes/ale/lagos/lagos_v2.html#arrivals" class="btn-black">
+      Shop Now
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+    </a>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section id="cats" class="section-pad">
+  <div class="section-header reveal visible">
+    <h2 class="section-title">Explorar Categorías</h2>
+  </div>
+  <div class="cats-grid reveal visible">
+    <div class="cat-card">
+      <img src="./LAGOS — Ropa y Accesorios_files/498666922_18383801374139217_3045412753792156797_n.jpg" alt="Pantalones">
+      <div class="cat-card-label">
+        <div class="cat-card-name">Pantalones</div>
+        <div class="cat-card-count">Cargo · Denim · Corderoy · Camo</div>
+      </div>
+    </div>
+    <div class="cat-card">
+      <img src="./LAGOS — Ropa y Accesorios_files/652091515_18099101684313050_6383963666479728065_n.jpg" alt="Tricotas">
+      <div class="cat-card-label">
+        <div class="cat-card-name">Tricotas &amp; Tops</div>
+        <div class="cat-card-count">Jerseys · Hoodies · Sets</div>
+      </div>
+    </div>
+    <div class="cat-card">
+      <img src="./LAGOS — Ropa y Accesorios_files/624629952_18310787848253867_2166174676682003565_n.jpg" alt="Accesorios">
+      <div class="cat-card-label">
+        <div class="cat-card-name">Accesorios</div>
+        <div class="cat-card-count">Caps · Dokeros · Bolsos</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BIG TEXT -->
+<div class="big-text-section">
+  <p>ROPA <span>CON</span><br>IDENTIDAD <span>PROPIA.</span></p>
+</div>
+
+<!-- FOOTER -->
+<footer id="nosotros">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo"><img src="./LAGOS — Ropa y Accesorios_files/lagos_logo2.png" alt="Lagos"></div>
+      <p class="footer-desc">Ropa dedicada al deporte y moda urbana. Marca nacional, hecha en Chile con carácter propio.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Catálogo</div>
+      <ul class="footer-links">
+        <li><a href="file:///Volumes/ale/lagos/lagos_v2.html#">Pantalones</a></li>
+        <li><a href="file:///Volumes/ale/lagos/lagos_v2.html#">Tricotas</a></li>
+        <li><a href="file:///Volumes/ale/lagos/lagos_v2.html#">Accesorios</a></li>
+        <li><a href="file:///Volumes/ale/lagos/lagos_v2.html#">Nuevos Drops</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Info</div>
+      <ul class="footer-links">
+        <li><a href="file:///Volumes/ale/lagos/lagos_v2.html#">Sobre Nosotros</a></li>
+        <li><a href="file:///Volumes/ale/lagos/lagos_v2.html#">Envíos y Despachos</a></li>
+        <li><a href="file:///Volumes/ale/lagos/lagos_v2.html#">Cambios y Devoluciones</a></li>
+        <li><a href="file:///Volumes/ale/lagos/lagos_v2.html#">FAQ</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Síguenos</div>
+      <ul class="footer-links">
+        <li><a href="file:///Volumes/ale/lagos/lagos_v2.html#">Instagram @lagosclothes</a></li>
+        <li><a href="file:///Volumes/ale/lagos/lagos_v2.html#">Facebook Lagos Clothes</a></li>
+        <li><a href="file:///Volumes/ale/lagos/lagos_v2.html#">@lagosvisualdrone</a></li>
+        <li><a href="file:///Volumes/ale/lagos/lagos_v2.html#">#lagosclothes</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2025 Lagos Clothes — Santiago, Chile 🇨🇱</p>
+    <div class="footer-socials">
+      <a href="file:///Volumes/ale/lagos/lagos_v2.html#">Instagram</a>
+      <a href="file:///Volumes/ale/lagos/lagos_v2.html#">Facebook</a>
+      <a href="file:///Volumes/ale/lagos/lagos_v2.html#">WhatsApp</a>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp flotante -->
+<a class="wa-btn" href="https://wa.me/56900000000" target="_blank" title="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path>
+  </svg>
+</a>
+
+<script>
+  // Scroll reveal
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }});
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+  // Filter tabs active state
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+
+  // Add to cart button micro-animation
+  document.querySelectorAll('.add-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      this.textContent = '✓';
+      this.style.background = '#22c55e';
+      setTimeout(() => { this.textContent = '+'; this.style.background = ''; }, 1200);
+    });
+  });
+</script>
+
+
+</body></html>
